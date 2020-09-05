@@ -1,7 +1,5 @@
 <template>
-  <div class="home">
-    <div class="alert alert-success text-center title">Zid-Test</div>
-  </div>
+  <div class="home">ss</div>
 </template>
 
 <script>
