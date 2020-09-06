@@ -7,6 +7,7 @@
     ></div>-->
     <transition name="slide">
       <div v-if="isNavOpen" class="sidebar-panel">
+        <button class="btn d-none exit" @click="toggleNav">X</button>
         <div class="sidebar-header">
           <div class="store-info my-auto mx-4">
             <img
@@ -48,6 +49,7 @@
 </template>
 <script>
 import { mapMutations, mapGetters } from "vuex";
+
 export default {
   methods: {
     ...mapMutations(["toggleNav"])
@@ -140,6 +142,23 @@ export default {
       &:hover {
         background-color: #57c292;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .sidebar-panel {
+    position: fixed;
+    height: 100%;
+    z-index: 999;
+  }
+
+  .exit {
+    display: inline-block !important;
+    color: #fff;
+    float: left;
+    &:hover {
+      color: #8d5da7;
     }
   }
 }

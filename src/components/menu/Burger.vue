@@ -1,6 +1,6 @@
 <template>
-  <div id="burger" :class="{active : isNavOpen}" @click.prevent="toggleNav">
-    <button type="button" class="burger-button" title="Menu">
+  <div id="burger" :class="{active : isNavOpen } ">
+    <button type="button" class="burger-button" @click.prevent="toggleNav" title="Menu">
       <span class="burger-bar burger-bar--1"></span>
       <span class="burger-bar burger-bar--2"></span>
       <span class="burger-bar burger-bar--3"></span>
@@ -15,7 +15,8 @@ export default {
   },
   computed: {
     ...mapGetters(["isNavOpen"])
-  }
+  },
+  props: {}
 };
 </script>
 <style>
@@ -37,7 +38,7 @@ button:focus {
   height: 30px;
   width: 32px;
   display: block;
-  z-index: 999;
+
   border: 0;
   border-radius: 0;
   background-color: transparent;
@@ -60,7 +61,6 @@ button:focus {
 }
 
 .burger-bar--1 {
-  -webkit-transform: translateY(-6px);
   transform: translateY(-6px);
 }
 
@@ -81,25 +81,12 @@ button:focus {
   transform: translateY(6px);
 }
 
-#burger.active .burger-button {
-  transform: rotate(-180deg);
-}
-
 #burger.active .burger-bar {
-  background-color: #fff;
+  background-color: #000;
 }
-
-#burger.active .burger-bar--1 {
-  transform: rotate(45deg);
-  background-color: #130f40;
-}
-
-#burger.active .burger-bar--2 {
-  opacity: 0;
-}
-
-#burger.active .burger-bar--3 {
-  transform: rotate(-45deg);
-  background-color: #130f40;
+@media screen and (max-width: 900px) {
+  .burger-bar {
+    background-color: #fff;
+  }
 }
 </style>
