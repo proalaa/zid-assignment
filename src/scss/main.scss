@@ -1,3 +1,4 @@
+//@import "modules/zid";
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap');
 html {
   overflow-x: hidden !important;
@@ -16,4 +17,22 @@ li {
 }
 a {
   text-decoration: none !important;
+}
+* {
+  text-align: right;
+}
+.btn-success
+{
+  background-color: #57c292;
+  border: 0;
+}
+.btn-outline-success
+{
+  border: 1px solid #57c292 ;
+  color: #57c292;
+  &:hover {
+    background-color: #57c292;
+    border: 0;
+  }
+
 }

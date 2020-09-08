@@ -6,11 +6,12 @@
         <div class="m-1 time">الساعة{{time}} بتوقيت الرياض</div>
       </div>
 
-      <div class="left-sec">
+      <div class="left-sec d-flex ">
+        <search-bar></search-bar>
         <a
           href="#"
           role="button"
-          class="btn btn-outline-success rounded-pill px-3 py-2"
+          class="btn px-3 py-2"
         >تسجيل الخروج</a>
       </div>
     </div>
@@ -25,14 +26,16 @@
 </template>
 <script>
 import Burger from "@/components/menu/Burger";
+import SearchBar from "./global/SearchBar";
 export default {
   computed: {
-    time: () => {
-      Date.now();
+    time:function(){
+
+      return Date.time;
     }
   },
   components: {
-    Burger
+    Burger,SearchBar
   }
 };
 </script>
@@ -40,8 +43,21 @@ export default {
 <style lang="scss" scoped>
 .top-header {
   background-color: #fff;
-
+  height: 60px;
   padding: 12px 30px;
+  font-size: 13px;
+  .time
+  {
+    color: #45A787;
+    font-weight: 600;
+
+  }
+  .left-sec{
+    a{
+      font-size: 15px;
+    }
+
+  }
 }
 .main-header {
   background-color: #f8f8f8;

@@ -5,12 +5,12 @@
         <Sidebar />
       </div>
 
-      <div class="col p-0">
+      <div class="col p-0 page">
         <Header />
-        <!-- <div class="toggler">
-          <burger />
-        </div>-->
-        <router-view />
+
+        <main class="mt-4">
+          <router-view />
+        </main>
       </div>
     </div>
   </div>
@@ -37,11 +37,11 @@ export default {
 <style lang="scss">
 #app {
   transition: all 0.5s ease-in-out;
-}
-@media screen and (max-width: 900px) {
-  .toggler {
-    position: absolute;
-    right: 12px;
+  .main-nav{
+    z-index: 99999;
+  }
+  .page{
+    transition: all .5s ease-in-out;
   }
 }
 </style>

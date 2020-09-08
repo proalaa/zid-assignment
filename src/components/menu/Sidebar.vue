@@ -20,7 +20,7 @@
           <div class="btns-view">
             <a href="#" role="button">
               مشاهدة المتجر
-              <i></i>
+              <i class="zid zid-eye"></i>
             </a>
             <a href="#" role="button">
               تخصيص الواجهة
@@ -82,16 +82,18 @@ export default {
 } */
 
 .sidebar-panel {
-  overflow-y: auto;
+
   background-color: #362340;
   right: 0;
   top: 0;
-  height: 100vh;
-  z-index: 999;
+  min-height: 100vh;
+  z-index: 99999 !important;
   font-weight: 500;
   width: 250px;
   text-align: right;
   color: aliceblue;
+  padding-bottom:80px ;
+  overflow-y: auto;
 }
 .nav-wrapper {
   a {
