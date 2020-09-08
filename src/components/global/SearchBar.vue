@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <div class="search-bar">
         <form action="">
             <input type="text" name="search" id="" class="form-control-lg rounded-pill position-relative " placeholder="ابحث هنا.... ">
-            <i class="position-absolute ff">X</i>
+            <font-awesome-icon icon="search" class="search-icon" />
         </form>
     </div>
 </template>
@@ -14,8 +14,10 @@
 </script>
 
 <style scoped>
-    form
-    {
+    .search-bar{
+
+    }
+    form {
         position: relative;
     }
     input[type=text]
@@ -31,10 +33,14 @@
         padding-right: 40px;
         width: 100%;
         position: relative;
-        transition: all 0.3s ease;    }
-    .ff{
+        transition: all 0.3s ease;
+    }
+    .search-icon{
         position: absolute;
         left: 10px;
-        top: 8px;
+        top: 12px;
+        z-index: 9999;
     }
+
+
 </style>

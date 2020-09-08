@@ -43,5 +43,6 @@ export default {
   .page{
     transition: all .5s ease-in-out;
   }
+
 }
 </style>

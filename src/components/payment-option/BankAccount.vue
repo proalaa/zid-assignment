@@ -1,5 +1,5 @@
 <template>
-    <div class="bank-info mx-3">
+    <div class="bank-info mx-3 py-4">
         <span class="title">
             {{bankAccount.bankName}}
         </span>
@@ -30,7 +30,7 @@
 <style scoped lang="scss">
     .bank-info{
         font-size: 14px;
-        border-bottom: 1px solid #635972;
+        border-bottom: 1px solid #5b4665;
         padding-bottom: 30px;
         .title{
             font-weight: 700;

@@ -5,6 +5,13 @@ import store from './store';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './scss/main.scss';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faSearch,faEye,faPen,faHome,faChartPie,faShoppingBasket,faCubes,faGlobe, faUserTag,faObjectGroup,faUsers,faCog,faArrowLeft  } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add( faSearch,faEye,faPen,faHome,faChartPie,faShoppingBasket,faCubes,faGlobe, faUserTag,faObjectGroup,faUsers,faCog,faArrowLeft )
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false;
 

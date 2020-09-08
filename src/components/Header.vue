@@ -1,18 +1,20 @@
 <template>
   <div>
     <div class="top-header row justify-content-between align-content-center">
-      <div class="row">
+      <div class="row align-items-center">
         <burger class="tog mx-1"></burger>
         <div class="m-1 time">الساعة{{time}} بتوقيت الرياض</div>
       </div>
 
       <div class="left-sec d-flex ">
-        <search-bar></search-bar>
+        <search-bar class=" align-self-center"></search-bar>
         <a
           href="#"
           role="button"
-          class="btn px-3 py-2"
-        >تسجيل الخروج</a>
+          class="btn px-3 py-2 d-flex align-items-center"
+        ><span class="align-self-start">تسجيل الخروج</span>
+        <font-awesome-icon icon="arrow-left" class="mr-1 align-self-center"/>
+        </a>
       </div>
     </div>
     <div class="main-header text-right">
@@ -31,7 +33,7 @@ export default {
   computed: {
     time:function(){
 
-      return Date.time;
+      return new Date().toLocaleTimeString();;
     }
   },
   components: {

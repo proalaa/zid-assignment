@@ -19,29 +19,31 @@
           </div>
           <div class="btns-view">
             <a href="#" role="button">
+
+              <font-awesome-icon icon="eye" class="ml-2" />
               مشاهدة المتجر
-              <i class="zid zid-eye"></i>
+
             </a>
             <a href="#" role="button">
+              <font-awesome-icon icon="pen" class="ml-2" />
               تخصيص الواجهة
-              <i class></i>
+
             </a>
           </div>
         </div>
         <div class="nav-wrapper">
-          <router-link to="/" tag="a" exact>الرئيسية</router-link>
+          <router-link to="/" tag="a" exact> <font-awesome-icon icon="home" class="ml-2"/>الرئيسية </router-link>
+          <router-link to="/reports" tag="a"> <font-awesome-icon icon="chart-pie" class="ml-2" /> التقارير</router-link>
+          <router-link to="/orders" tag="a"><font-awesome-icon icon="shopping-basket" class="ml-2"/> الطلبات</router-link>
+          <router-link to="" tag="a"><font-awesome-icon icon="cubes" class="ml-2"/> المنتجات</router-link>
+          <router-link to tag="a"><font-awesome-icon icon="globe" class="ml-2"/> التسويق</router-link>
+          <router-link to tag="a"><font-awesome-icon icon="user-tag" class="ml-2"/>العملاء</router-link>
+          <router-link to tag="a"><font-awesome-icon icon="object-group" class="ml-2"/>منظومة زد</router-link>
+          <router-link to tag="a"><font-awesome-icon icon="users" class="ml-2"/>فريق العمل</router-link>
+          <router-link to tag="a"><font-awesome-icon icon="cog" class="ml-2"/>الاعدادات</router-link>
+          <router-link to tag="a"><font-awesome-icon icon="object-group" class="ml-2"/>خيارات الواجهة</router-link>
 
-          <router-link to="/report" tag="a">التقارير</router-link>
-
-          <router-link to="/orders" tag="a">الطلبات</router-link>
-          <router-link to tag="a">المنتجات</router-link>
-          <router-link to tag="a">التسويق</router-link>
-          <router-link to tag="a">العملاء</router-link>
-          <router-link to tag="a">منظومة زد</router-link>
-          <router-link to tag="a">فريق العمل</router-link>
-          <router-link to tag="a">الاعدادات</router-link>
-          <router-link to tag="a">خيارات الواجهة</router-link>
-          <a role="button">واجهة ليلية</a>
+          <a role="button"> <span class="night-mode-toggler ml-2"><i></i></span>واجهة ليلية</a>
         </div>
       </div>
     </transition>
@@ -70,7 +72,10 @@ export default {
   transform: translateX(100%);
   transition: all 150ms ease-in 0s;
 }
-
+.sidebar{
+  min-height: 100%;
+  background-color: #362340;
+}
 /* .sidebar-backdrop {
     background-color: rgba(0, 0, 0, 0.5);
     width: 100vw;
@@ -80,13 +85,18 @@ export default {
     right: 0;
     cursor: pointer;
 } */
-
+.night-mode-toggler{
+  border: 1px solid #ffffff;
+  width: 10px;
+  padding:0 10px;
+  font-size: 0;
+}
 .sidebar-panel {
 
   background-color: #362340;
   right: 0;
   top: 0;
-  min-height: 100vh;
+
   z-index: 99999 !important;
   font-weight: 500;
   width: 250px;
@@ -146,6 +156,7 @@ export default {
       }
     }
   }
+
 }
 
 @media screen and (max-width: 900px) {
